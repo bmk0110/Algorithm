@@ -35,22 +35,32 @@
 #         print(n+n//1000+n//100+n//10+n%10)
 #         infn(n+n//1000+n//100+n//10+n%10)
 
-abc='abcdefghijklmnopqrstuvwxyz'
+# abc='abcdefghijklmnopqrstuvwxyz'
+#
+# T= int(input())
+# count=0
+# for t in range(T):
+#     array = []
+#     n=input()
+#     real=True
+#     for i in range(len(n)):
+#         if n[i] not in array:
+#             array.append(n[i])
+#         else:
+#             if n[i-1] != n[i]:
+#                 real=False
+#                 # print(n)
+#     if real==True:
+#         count+=1
+#         # print(n)
+# print(count)
 
-T= int(input())
-count=0
-for t in range(T):
-    array = []
-    n=input()
-    real=True
-    for i in range(len(n)):
-        if n[i] not in array:
-            array.append(n[i])
-        else:
-            if n[i-1] != n[i]:
-                real=False
-                # print(n)
-    if real==True:
-        count+=1
-        # print(n)
-print(count)
+import heapq
+
+heap = []
+heapq.heappush(heap, 3)
+heapq.heappush(heap, 1)
+heapq.heappush(heap, 10)
+heapq.heappush(heap, 5)
+heapq.heappush(heap, 8)
+print(heap)
