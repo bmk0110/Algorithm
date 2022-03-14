@@ -19,5 +19,4 @@ def solution(n, k):
                 cnt += 1
         else:
             pass
-
     return cnt
