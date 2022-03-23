@@ -46,3 +46,10 @@
 #         print('yes', end=' ')
 #     else:
 #         print('no', end=' ')
+
+# import sys
+# input = sys.stdin.readline
+# N = int(input())
+# arr = list(map(int,input().split()))
+# M = int(input())
+# customer=list(map(int,input().split()))
