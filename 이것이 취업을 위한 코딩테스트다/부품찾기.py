@@ -49,7 +49,24 @@
 
 # import sys
 # input = sys.stdin.readline
+#
+# def binary_search(arr,target, start,end):
+#     while start<=end:
+#         mid = (start+end)//2
+#         if arr[mid]==target:
+#             return mid
+#         elif arr[mid]>target:
+#             end=mid-1
+#         else:
+#             start= mid+1
+#     return None
 # N = int(input())
 # arr = list(map(int,input().split()))
 # M = int(input())
 # customer=list(map(int,input().split()))
+# for i in customer:
+#     a=binary_search(arr,i,0,N-1)
+#     if a ==None:
+#         print('no',end=' ')
+#     else:
+#         print('yes',end=' ')
