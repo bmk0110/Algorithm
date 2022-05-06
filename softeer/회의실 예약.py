@@ -1,9 +1,7 @@
 import sys
 
 
-def record(start):
-    a = start
-    b = start + 1
+def record(a,b):
     if a < 10:
         a = '0' + str(a)
     else:
@@ -40,7 +38,7 @@ for i in range(len(rooms)):
     elif len(rooms[i]) == 1:
         new_rooms.append(rooms[i])
     elif len(rooms[i]) == 2:
-        new_rooms.append([rooms[i][0], record(rooms[i][1])])
+        new_rooms.append([rooms[i][0], record(rooms[i][1],rooms[i][1]+1)])
     else:
         numbers = rooms[i][1:len(rooms[i])]
         # print(numbers)
@@ -54,37 +52,17 @@ for i in range(len(rooms)):
                 ss += 1
                 end += 1
             else:
-                a = numbers[start]
-                b = numbers[ss] + 1
-                if a < 10:
-                    a = '0' + str(a)
-                else:
-                    a = str(a)
-                if b < 10:
-                    b = '0' + str(b)
-                else:
-                    b = str(b)
-                arr.append(a + '-' + b)
+                arr.append(record(numbers[start],numbers[ss]+1))
                 start = end
                 ss = start
                 if start == len(numbers) - 1:
-                    arr.append(record(numbers[start]))
+                    arr.append(record(numbers[start],numbers[start]+1))
                     finish = True
                     break
                 else:
                     end = start + 1
         if finish != True:
-            a = numbers[start]
-            b = numbers[ss] + 1
-            if a < 10:
-                a = '0' + str(a)
-            else:
-                a = str(a)
-            if b < 10:
-                b = '0' + str(b)
-            else:
-                b = str(b)
-            arr.append(a + '-' + b)
+            arr.append(record(numbers[start],numbers[ss]+1))
         new_rooms.append(arr)
 for r in range(len(new_rooms)):
     if r != 0:
